@@ -1001,6 +1001,15 @@ html {
 .result-table-cont div table td {
   width: auto;
 }
+.result-table-cont div table td.null-value {
+  color: var(--ColorGrayLv3);
+  font-style: italic;
+}
+
+td.null-value {
+  color: var(--ColorGrayLv3);
+  font-style: italic;
+}
 
 /* Sample Data */
 .cont-sample .table-list {
@@ -1682,5 +1691,3 @@ h4.tuto-sec-subtitle {
   width: 2.4rem;
   height: 2.4rem;
 }
-
-/*# sourceMappingURL=style.css.map */

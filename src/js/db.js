@@ -108,7 +108,12 @@ const getResultTable = (data) => {
 
     value.forEach((v) => {
       const td = document.createElement('td');
-      td.textContent = v;
+      if (v === null || v === undefined) {
+        td.textContent = 'NULL';
+        td.classList.add('null-value');
+      } else {
+        td.textContent = v;
+      }
       tr.appendChild(td);
     });
     tbody.appendChild(tr);
@@ -150,6 +155,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     '주문',
     '주문상세',
     '공급업체',
+    '고객정보',
+    '판매정보',
   ];
   tableList.map((file) => getJsonToTable(db, file));
 

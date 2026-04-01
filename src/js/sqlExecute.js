@@ -57,7 +57,12 @@ const showSampleData = (tableId, columns, values) => {
 
     value.forEach((v) => {
       const td = document.createElement('td');
-      td.textContent = v;
+      if (v === null || v === undefined) {
+        td.textContent = 'NULL';
+        td.classList.add('null-value');
+      } else {
+        td.textContent = v;
+      }
       tr.appendChild(td);
     });
     tbody.appendChild(tr);
@@ -72,7 +77,7 @@ const downloadJson = (table) => {
   a.click();
 };
 
-const tableList = ['상품', '카테고리', '고객', '주문', '주문상세', '공급업체'];
+const tableList = ['상품', '카테고리', '고객', '주문', '주문상세', '공급업체', '고객정보', '판매정보'];
 const $tableListCont = document.querySelector('.table-list');
 const docFrag = document.createDocumentFragment();
 tableList.forEach((table) => {

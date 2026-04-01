@@ -157,6 +157,16 @@ html {
   table td {
     width: auto;
   }
+
+  table td.null-value {
+    color: var(--ColorGrayLv3);
+    font-style: italic;
+  }
+}
+
+td.null-value {
+  color: var(--ColorGrayLv3);
+  font-style: italic;
 }
 /* Sample Data */
 .cont-sample {
